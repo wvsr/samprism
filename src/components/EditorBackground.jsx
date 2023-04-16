@@ -83,7 +83,7 @@ function EditorBackground() {
             >
               <Popover.Panel
                 className='
-            absolute z-10 mt-3 mb-10 w-screen max-w-sm px-4 sm:px-0 lg:max-w-xl
+            absolute z-10 mt-3 mb-10 w-screen max-w-sm px-4
             transform -translate-x-1/2
             bottom-full
             left-1/2

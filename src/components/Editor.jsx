@@ -20,10 +20,10 @@ function CodeFrame() {
   const frameNode = useSelector((state) => state.editor.frameNode)
   const isBg = useSelector((state) => state.editor.isBg)
   useEffect(() => {
-    dispatch(toggleBgImage())
+    dispatch(toggleBgImage(!toggleIsBg))
   }, [toggleIsBg])
   useEffect(() => {
-    dispatch(changeDarkMode())
+    dispatch(changeDarkMode(!toggleDarkMode))
   }, [toggleDarkMode])
   useEffect(() => {
     dispatch(changeLanguage(selectedLanguage))

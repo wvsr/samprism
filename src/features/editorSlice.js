@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   padding: 16,
-  bgColor: 'red',
+  bgColor: 'linear-gradient(to right, rgb(172, 182, 229), rgb(134, 253, 232))',
   darkMode: true,
   language: 'javascript',
   isBg: true,
@@ -16,11 +16,11 @@ export const editorSlice = createSlice({
     changePadding: (state, action) => {
       state.padding = action.payload
     },
-    toggleBgImage: (state) => {
-      state.isBg = !state.isBg
+    toggleBgImage: (state, action) => {
+      state.isBg = action.payload
     },
-    changeDarkMode: (state) => {
-      state.darkMode = !state.darkMode
+    changeDarkMode: (state, action) => {
+      state.darkMode = action.payload
     },
     reset: (state) => {
       state = initialState

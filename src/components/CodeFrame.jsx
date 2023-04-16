@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import Prism from 'prismjs'
 import { useSelector, useDispatch } from 'react-redux'
 import { setFrameNode } from '../features/editorSlice'
+
 import 'prismjs/components/prism-ada'
 import 'prismjs/components/prism-jsx'
 import 'prismjs/components/prism-c'
@@ -183,7 +184,9 @@ function Editor() {
                   ref={inputRef}
                   onScroll={() => sync_scroll(inputRef.current)}
                   onKeyDown={(event) => check_tab(inputRef.current, event)}
-                  className={`z-50 border-none bg-transparent outline-none resize-none m-0 font-mono  font-medium caret-white scrollbar-hide`}
+                  className={`z-50 border-none bg-transparent outline-none resize-none m-0 font-mono  font-medium  ${
+                    darkMode ? 'caret-white' : 'caret-black text-black'
+                  } scrollbar-hide`}
                   style={{
                     WebkitTextFillColor: 'transparent',
                     textSizeAdjust: 'none',
@@ -194,7 +197,7 @@ function Editor() {
                 />
                 <div
                   id='textdiv'
-                  className={`m-0 font-mono leading-[22.5px] text-white font-medium ${
+                  className={`m-0 font-mono leading-[22.5px] font-medium ${
                     darkMode ? 'text-white' : 'text-gray-900'
                   }`}
                   style={{
@@ -204,16 +207,16 @@ function Editor() {
                     tabSize: 2,
                   }}
                 >
-                  <pre
+                  <div
                     aria-hidden='true'
                     id='highlighting'
                     className='scrollbar-hide'
                   >
-                    <code
+                    <div
                       className={`language-${language}`}
                       id='highlighting-content'
-                    ></code>
-                  </pre>
+                    ></div>
+                  </div>
                 </div>
               </div>
             </div>
