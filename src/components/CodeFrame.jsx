@@ -207,16 +207,16 @@ function Editor() {
                     tabSize: 2,
                   }}
                 >
-                  <div
+                  <pre
                     aria-hidden='true'
                     id='highlighting'
                     className='scrollbar-hide'
                   >
-                    <div
+                    <code
                       className={`language-${language}`}
                       id='highlighting-content'
-                    ></div>
-                  </div>
+                    ></code>
+                  </pre>
                 </div>
               </div>
             </div>
