@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  padding: 16,
+  padding: 32,
   bgColor: 'linear-gradient(to right, rgb(172, 182, 229), rgb(134, 253, 232))',
   darkMode: true,
   language: 'javascript',
   isBg: true,
-  fontSize: '20px',
+  fontSize: '17px',
   frameNode: null,
 }
 export const editorSlice = createSlice({
