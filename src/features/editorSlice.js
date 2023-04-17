@@ -6,7 +6,7 @@ const initialState = {
   darkMode: true,
   language: 'javascript',
   isBg: true,
-  fontSize: 'xs',
+  fontSize: '20px',
   frameNode: null,
 }
 export const editorSlice = createSlice({
