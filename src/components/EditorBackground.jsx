@@ -115,8 +115,8 @@ function EditorBackground() {
                             className={({ selected }) =>
                               `py-2 px-4 font-bold text-sm ${
                                 selected
-                                  ? 'bg-gray-700 text-white'
-                                  : 'text-gray-400 hover:text-gray-100'
+                                  ? 'text-white'
+                                  : 'text-gray-400 hover:text-gray-300'
                               }`
                             }
                           >
@@ -128,7 +128,7 @@ function EditorBackground() {
                         {tabs.map((tab, index) => (
                           <Tab.Panel
                             key={index}
-                            className='p-4 max-h-64 overflow-y-auto'
+                            className='p-4 h-96 overflow-y-auto'
                           >
                             {tab.content}
                           </Tab.Panel>
