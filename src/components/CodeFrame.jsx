@@ -112,7 +112,7 @@ function Editor() {
     }
   }
   return (
-    <div className='flex justify-center mt-28' id='codeframe'>
+    <div className='flex justify-center mt-28 mb-60' id='codeframe'>
       <div
         className='relative border-[0.2px] border-gray-700 inline-block  m-0 transition-[padding] duration-500'
         style={frameStyles}
@@ -120,9 +120,8 @@ function Editor() {
       >
         <div className='w-auto'>
           <div
-            className={`relative min-w-[420px] max-w-[920px] transition-all duration-100 ${
-              'text-' + fontSize
-            }`}
+            className={`relative min-w-[420px] max-w-[920px] transition-all duration-100`}
+            style={{ fontSize: fontSize }}
           >
             <div
               className={`border-none shadow-xl flex min-h-[120px] flex-col items-stretch pt-[10px] rounded-lg ${
@@ -151,7 +150,7 @@ function Editor() {
                   ></div>
                 </div>
                 <div
-                  className='relative h-4 text-[hsla(0,0%,100%,.3] font-sans text-[12px] font-medium leading-3 text-center'
+                  className='relative h-4 text-[hsla(0,0%,100%,.3] text-[12px] font-medium leading-3 text-center'
                   style={{ letterSpacing: '-2rem' }}
                 >
                   <input
@@ -184,7 +183,7 @@ function Editor() {
                   ref={inputRef}
                   onScroll={() => sync_scroll(inputRef.current)}
                   onKeyDown={(event) => check_tab(inputRef.current, event)}
-                  className={`z-50 border-none bg-transparent outline-none resize-none m-0 font-mono  font-medium  ${
+                  className={`z-50 border-none bg-transparent outline-none resize-none m-0   font-medium  ${
                     darkMode ? 'caret-white' : 'caret-black text-black'
                   } scrollbar-hide`}
                   style={{
@@ -197,7 +196,7 @@ function Editor() {
                 />
                 <div
                   id='textdiv'
-                  className={`m-0 font-mono leading-[22.5px] font-medium ${
+                  className={`m-0 leading-[22.5px] font-medium ${
                     darkMode ? 'text-white' : 'text-gray-900'
                   }`}
                   style={{
