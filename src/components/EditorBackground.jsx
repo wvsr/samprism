@@ -79,12 +79,14 @@ function EditorBackground() {
   ]
   return (
     <div className='relative'>
-      <Popover className='relative'>
+      <p className='text-sm text-gray-400 mb-1.5'>Change Background</p>
+      <Popover className='relative' title='Chnage frame background'>
         {({ open }) => (
           <>
-            <Popover.Button className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center'>
-              <span>Solutions</span>
-            </Popover.Button>
+            <Popover.Button
+              className='px-8 py-5 rounded-lg'
+              style={{ background: bgColor }}
+            ></Popover.Button>
 
             <Transition
               as={Fragment}
