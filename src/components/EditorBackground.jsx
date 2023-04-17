@@ -28,6 +28,20 @@ function EditorBackground() {
   const Colors = () => {
     return (
       <div className='flex gap-2 flex-wrap'>
+        <label
+          htmlFor='color'
+          className='w-[115px] h-20 rounded-lg cursor-pointer flex justify-center items-center text-lg font-bold'
+        >
+          Custom color
+        </label>
+        <input
+          id='color'
+          className='hidden absolute'
+          type='color'
+          onChange={(e) => dispatch(changeBgColor(e.target.value))}
+          value={'#ddd'}
+          placeholder='sami'
+        />
         {colors.map((i) => (
           <div
             className='w-[115px] h-20 rounded-lg cursor-pointer'
